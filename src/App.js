@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const App = props => {
 
   const [state, setState] = useState(props)
+
+  //! レンダーの後で実行される
+  useEffect(() => {
+    console.log('This is like componnetDidmount or componentDidUpdate')
+  }, [name]) 
+
+ 
 
   return (
     <React.Fragment>
